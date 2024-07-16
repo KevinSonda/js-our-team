@@ -1,3 +1,42 @@
+// funzione che mostra i membri nel dom
+function showMember(container, img, name, role){
+    //inserisco nell'html
+    container.innerHTML += `<div class="card"><img src="./img/${teams[i].img}"> <div class="card-body">
+      <h4>${teams[i].name}</h4>
+      <p>${teams[i].role}</p>
+    </div>
+    </div>`;
+}
+
+//funzione che aggiunge un membro all'aray
+function createMembers(nome, ruolo, foto) {
+    console.log(nome, ruolo, foto);
+
+
+let object = {
+    name: nome,
+    role: ruolo,
+    img: foto,
+}
+
+return object
+}
+
+// funzione che mi cicla l'array e mi crea il dom
+function showTeamCards(array_team) {
+    //recuero il contenitore
+    const teams_container = document.getElementById('teams');
+    teams_container.innerHTML = '';
+    
+    //ciclo l'array he ho come parametro
+
+    for (let i = 0; i < teams.length; i++) {
+        console.log(`${array_teams[i].name} ${teams[i].role} ${teams[i].img}`);
+    }   
+}
+
+
+
 const teams = [
     {
         name: "Wayne Barnett", role: "Founder & CEO", img: "wayne-barnett-founder-ceo.jpg"
@@ -20,15 +59,10 @@ const teams = [
 
 ];
 
+//recupero l'elememto del dom che deve contenere le stringhe
+ showTeamCards(teams);
 
-//recupero l'lemento del dom
-const teams_container = document.getElementById('teams')
+ 
 
-for (let i = 0; i < teams.length; i++) {
-    console.log(`${teams[i].name} ${teams[i].role} ${teams[i].img}`)
-    teams_container.innerHTML += `<div class="card"><img src="./img/${teams[i].img}"> <div class="card-body">
-      <h4>${teams[i].name}</h4>
-      <p>${teams[i].role}</p>
-    </div>
-    </div>`;
-}
+
+ 
