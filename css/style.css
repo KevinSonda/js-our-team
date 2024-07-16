@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#teams {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    border-bottom: 1px solid gainsboro;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 5px 10px 10px gray;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card-body{
+    text-align: center;
+    padding: 15px;
+}

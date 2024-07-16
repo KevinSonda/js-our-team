@@ -26,5 +26,9 @@ const teams_container = document.getElementById('teams')
 
 for (let i = 0; i < teams.length; i++) {
     console.log(`${teams[i].name} ${teams[i].role} ${teams[i].img}`)
-    teams_container.innerHTML += `<div>${teams[i].name} ${teams[i].role} ${teams[i].img}</div>`
+    teams_container.innerHTML += `<div class="card"><img src="./img/${teams[i].img}"> <div class="card-body">
+      <h4>${teams[i].name}</h4>
+      <p>${teams[i].role}</p>
+    </div>
+    </div>`;
 }
