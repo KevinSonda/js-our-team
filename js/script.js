@@ -20,6 +20,11 @@ const teams = [
 
 ];
 
+
+//recupero l'lemento del dom
+const teams_container = document.getElementById('teams')
+
 for (let i = 0; i < teams.length; i++) {
     console.log(`${teams[i].name} ${teams[i].role} ${teams[i].img}`)
+    teams_container.innerHTML += `<div>${teams[i].name} ${teams[i].role} ${teams[i].img}</div>`
 }
